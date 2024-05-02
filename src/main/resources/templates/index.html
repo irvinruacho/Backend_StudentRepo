@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+    <h1>Search Students</h1>
+    <p>Choose an option below to search for students:</p>
+
+    <!-- Option to view all students -->
+    <div>
+        <h2>View All Students</h2>
+        <a href="/students" class="btn btn-primary">View All</a>
+    </div>
+
+    <!-- Form to search students by ID -->
+        <h2>Search Student by Major</h2>
+        <div class="container">
+            <!-- Form to search students by major -->
+            <form action="/students/major" method="GET">
+                <div class="mb-3">
+                    <label for="major" class="form-label">Major:</label>
+                    <input type="text" class="form-control" id="major" name="major" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+
+
+        <!-- Form to search students by age -->
+    <h2>Search Student by Age</h2>
+    <div class="container">
+        <form action="/students/age" method="GET">
+            <div class="mb-3">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+<!--    <div class="container">-->
+<!--        <h1 th:text="${student?.id != null ? 'Edit Student' : 'New Student'}"></h1>-->
+
+<!--        &lt;!&ndash; Form to create or update a student &ndash;&gt;-->
+<!--        <form action="#" method="POST">-->
+<!--            <div class="mb-3">-->
+<!--                <label for="firstName" class="form-label">First Name:</label>-->
+<!--                <input type="text" class="form-control" id="firstName" name="firstName" th:value="${student.firstName}" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <label for="lastName" class="form-label">Last Name:</label>-->
+<!--                <input type="text" class="form-control" id="lastName" name="lastName" th:value="${student.lastName}" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <label for="age" class="form-label">Age:</label>-->
+<!--                <input type="number" class="form-control" id="age" name="age" th:value="${student.age}" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <label for="major" class="form-label">Major:</label>-->
+<!--                <input type="text" class="form-control" id="major" name="major" th:value="${student.major}" required>-->
+<!--            </div>-->
+<!--            <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--        </form>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
